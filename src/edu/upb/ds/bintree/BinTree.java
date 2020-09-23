@@ -58,15 +58,15 @@ public class BinTree {
         }
     }
 
-    public String preOrder() {
+    public String preOrder(Node root) {
         return "";
     }
 
-    public String inOrder() {
+    public String inOrder(Node root) {
         return "";
     }
 
-    public String posOrder() {
+    public String posOrder(Node root) {
         return "";
     }
 
