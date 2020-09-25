@@ -58,30 +58,30 @@ public class BinTree {
         }
     }
 
-    public void preOrder(Node root) {
+    public void preOrden(Node root) {
         if(root == null) {
             return;
         }
         System.out.print(root.object + " ");
-        preOrder(root.left);
-        preOrder(root.right);
+        preOrden(root.left);
+        preOrden(root.right);
     }
 
-    public void inOrder(Node root) {
+    public void inOrden(Node root) {
         if(root == null) {
             return;
         }
-        inOrder(root.left);
+        inOrden(root.left);
         System.out.print(root.object + " ");
-        inOrder(root.right);
+        inOrden(root.right);
     }
 
-    public void posOrder(Node root) {
+    public void posOrden(Node root) {
         if(root == null) {
             return;
         }
-        posOrder(root.left);
-        posOrder(root.right);
+        posOrden(root.left);
+        posOrden(root.right);
         System.out.print(root.object + " ");
     }
 

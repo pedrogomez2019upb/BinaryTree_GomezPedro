@@ -6,7 +6,7 @@ public class Main {
         //###########################
         //CREACION DEL ARBOL BINARIO
         //###########################
-        BinTree treeOrder = new BinTree();
+        BinTree arbolBinario = new BinTree();
         //###########################
         //CREACION DE LA RAIZ
         //###########################
@@ -29,17 +29,17 @@ public class Main {
         //###########################
         //PREORDEN
         //###########################
-        treeOrder.preOrder(root);
+        arbolBinario.preOrden(root);
         System.out.println();
         //###########################
         //INORDEN
         //###########################
-        treeOrder.inOrder(root);
+        arbolBinario.inOrden(root);
         System.out.println();
         //###########################
         //POSORDEN
         //###########################
-        treeOrder.posOrder(root);
+        arbolBinario.posOrden(root);
         System.out.println();
     }
 }
