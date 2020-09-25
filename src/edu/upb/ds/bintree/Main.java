@@ -6,41 +6,55 @@ public class Main {
         //###########################
         //CREACION DEL ARBOL BINARIO
         //###########################
+        System.out.println("\n########################");
+        System.out.println("\nBienvenido al programa de arboles binarios");
         BinTree arbolBinario = new BinTree();
         //###########################
         //CREACION DE LA RAIZ
         //###########################
-        Node root = new Node("/");
+        Node raiz = new Node("/");
         //###########################
         //CREACION DE LAS RAMAS CON SUS RAICES
         //###########################
-        root.left = new Node("+");
-        root.right = new Node("*");
-        root.left.left = new Node("-");
-        root.left.right = new Node("+");
-        root.left.left.right=new Node("a");
-        root.left.right.left=new Node("x");
-        root.left.right.right=new Node("y");
-        root.right.right=new Node("*");
-        root.right.left=new Node("+");
-        root.right.left.right=new Node("b");
-        root.right.right.left= new Node ("c");
-        root.right.right.right= new Node ("a");
+        raiz.left = new Node("+");
+        raiz.right = new Node("*");
+        raiz.left.left = new Node("-");
+        raiz.left.right = new Node("+");
+        raiz.left.left.right=new Node("a");
+        raiz.left.right.left=new Node("x");
+        raiz.left.right.right=new Node("y");
+        raiz.right.right=new Node("*");
+        raiz.right.left=new Node("+");
+        raiz.right.left.right=new Node("b");
+        raiz.right.right.left= new Node ("c");
+        raiz.right.right.right= new Node ("a");
         //###########################
         //PREORDEN
         //###########################
-        arbolBinario.preOrden(root);
+        System.out.println("\n########################");
+        System.out.println("\nArbol binario - PreOrden");
+        System.out.println("\n########################");
+        arbolBinario.preOrden(raiz);
         System.out.println();
         //###########################
         //INORDEN
         //###########################
-        arbolBinario.inOrden(root);
+        System.out.println("\n########################");
+        System.out.println("\nArbol binario - InOrden");
+        System.out.println("\n########################");
+        arbolBinario.inOrden(raiz);
         System.out.println();
         //###########################
         //POSORDEN
         //###########################
-        arbolBinario.posOrden(root);
+        System.out.println("\n########################");
+        System.out.println("\nArbol binario - PosOrden");
+        System.out.println("\n########################");
+        arbolBinario.posOrden(raiz);
         System.out.println();
+        System.out.println("\n########################");
+        System.out.println("\nGracias por utilizar el programa de arboles binarios");
+        System.out.println("\n########################");
     }
 }
 //Developed by Pedro Gomez - ID:000396221
