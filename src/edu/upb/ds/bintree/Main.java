@@ -9,13 +9,16 @@ public class Main {
         System.out.println("\n########################");
         System.out.println("\nBienvenido al programa de arboles binarios");
         BinTree arbolBinario = new BinTree();
+
+        //###########################
+        //CREACION DE LAS RAMAS CON SUS RAICES
+        //###########################
+        //Ejemplo Clase
+        /*
         //###########################
         //CREACION DE LA RAIZ
         //###########################
         Node raiz = new Node("/");
-        //###########################
-        //CREACION DE LAS RAMAS CON SUS RAICES
-        //###########################
         raiz.left = new Node("+");
         raiz.right = new Node("*");
         raiz.left.left = new Node("-");
@@ -28,6 +31,20 @@ public class Main {
         raiz.right.left.right=new Node("b");
         raiz.right.right.left= new Node ("c");
         raiz.right.right.right= new Node ("a");
+
+         */
+        //Arbol clase aplicativo
+        Node raiz = new Node(120);
+        raiz.left=new Node(87);
+        raiz.left.left=new Node(43);
+        raiz.left.left.left=new Node(22);
+        raiz.left.left.right=new Node(65);
+        raiz.left.left.right.left=new Node(56);
+        raiz.left.right=new Node (99);
+        raiz.left.right.left=new Node (87);
+        raiz.right=new Node(140);
+        raiz.right.left=new Node(130);
+        raiz.right.left.right=new Node(135);
         //###########################
         //PREORDEN
         //###########################
