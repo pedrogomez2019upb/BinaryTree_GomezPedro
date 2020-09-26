@@ -41,7 +41,7 @@ public class Main {
         raiz.left.left.right=new Node(65);
         raiz.left.left.right.left=new Node(56);
         raiz.left.right=new Node (99);
-        raiz.left.right.left=new Node (87);
+        raiz.left.right.left=new Node (93);
         raiz.right=new Node(140);
         raiz.right.left=new Node(130);
         raiz.right.left.right=new Node(135);
@@ -72,6 +72,7 @@ public class Main {
         System.out.println("\n########################");
         System.out.println("\nGracias por utilizar el programa de arboles binarios");
         System.out.println("\n########################");
+
     }
 }
 //Developed by Pedro Gomez - ID:000396221

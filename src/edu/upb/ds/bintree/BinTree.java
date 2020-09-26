@@ -85,6 +85,7 @@ public class BinTree {
         System.out.print(root.object + " ");
     }
 
+
     @Override
     public String toString() {
         return "BinTree{" +
