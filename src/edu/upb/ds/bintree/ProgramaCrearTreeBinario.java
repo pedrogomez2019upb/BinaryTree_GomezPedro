@@ -13,6 +13,7 @@ public class ProgramaCrearTreeBinario {
         arbol.crearElementoBinario(1);
 
         System.out.println(arbol);
+        arbol.inOrden(arbol.root);
     }
 }
 
