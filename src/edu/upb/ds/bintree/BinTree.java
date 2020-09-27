@@ -85,6 +85,26 @@ public class BinTree {
         System.out.print(root.object + " ");
     }
 
+    public Node ubicarElementoBinario(Node actual,int valor){
+        if (actual == null) {
+            return new Node(valor);
+        }
+
+        if (valor < (int) actual.object) {
+            actual.left = ubicarElementoBinario(actual.left, valor);
+        } else if (valor > (int) actual.object) {
+            actual.right = ubicarElementoBinario(actual.right, valor);
+        } else {
+
+            return actual;
+        }
+
+        return actual;
+    }
+
+    public void crearElementoBinario(int valor){
+        root = ubicarElementoBinario(root,valor);
+    }
 
     @Override
     public String toString() {
