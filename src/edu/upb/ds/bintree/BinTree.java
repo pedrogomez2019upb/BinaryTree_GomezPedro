@@ -107,6 +107,18 @@ public class BinTree {
     }
 
  */
+    public boolean encontrarElemento(int value , Node current){
+        if (current == null) {
+            return false;
+        }
+        if (value == (int) current.object) {
+            return true;
+        }
+        else if((int)current.object > value)
+            return encontrarElemento(value, current.left);
+        else
+            return encontrarElemento(value, current.right);
+    }
 
     @Override
     public String toString() {

@@ -13,11 +13,16 @@ public class ProgramaCrearTreeBinario {
         arbol.ubicarElementoBinario(8,raiz);
         arbol.ubicarElementoBinario(6,raiz);
         arbol.ubicarElementoBinario(1,raiz);
-        
+
         System.out.println("\n########################");
         System.out.println("\nSalida inOrden del arbol");
         arbol.inOrden(raiz);
         System.out.println("\n########################");
+        System.out.println("\nBuscando el elemento 12 en el arbol");
+        System.out.println(arbol.encontrarElemento(12,raiz));
+        System.out.println("\n########################");
+        System.out.println("\nBuscando el elemento 8 en el arbol");
+        System.out.println(arbol.encontrarElemento(8,raiz));
     }
 }
 //Developed by Pedro Gomez - ID:000396221
