@@ -85,15 +85,15 @@ public class BinTree {
         System.out.print(root.object + " ");
     }
 
-    public Node ubicarElementoBinario(Node actual,int valor){
+    public Node ubicarElementoBinario(int valor ,Node actual){
         if (actual == null) {
             return new Node(valor);
         }
 
         if (valor < (int) actual.object) {
-            actual.left = ubicarElementoBinario(actual.left, valor);
+            actual.left = ubicarElementoBinario(valor,actual.left);
         } else if (valor > (int) actual.object) {
-            actual.right = ubicarElementoBinario(actual.right, valor);
+            actual.right = ubicarElementoBinario(valor,actual.right);
         } else {
 
             return actual;
@@ -101,10 +101,12 @@ public class BinTree {
 
         return actual;
     }
-
+/*
     public void crearElementoBinario(int valor){
-        root = ubicarElementoBinario(root,valor);
+        root = ubicarElementoBinario(valor,root);
     }
+
+ */
 
     @Override
     public String toString() {
