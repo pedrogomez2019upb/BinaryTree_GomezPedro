@@ -85,39 +85,71 @@ public class BinTree {
         System.out.print(root.object + " ");
     }
 
-    public Node ubicarElementoBinario(int valor ,Node actual){
-        if (actual == null) {
+    public Node ubicarElementoBinario(int valor ,Node raiz){
+        if (raiz == null) {
             return new Node(valor);
         }
 
-        if (valor < (int) actual.object) {
-            actual.left = ubicarElementoBinario(valor,actual.left);
-        } else if (valor > (int) actual.object) {
-            actual.right = ubicarElementoBinario(valor,actual.right);
+        if (valor < (int) raiz.object) {
+            raiz.left = ubicarElementoBinario(valor,raiz.left);
+        } else if (valor > (int) raiz.object) {
+            raiz.right = ubicarElementoBinario(valor,raiz.right);
         } else {
 
-            return actual;
+            return raiz;
         }
 
-        return actual;
-    }
-/*
-    public void crearElementoBinario(int valor){
-        root = ubicarElementoBinario(valor,root);
+        return raiz;
     }
 
- */
-    public boolean encontrarElemento(int value , Node current){
-        if (current == null) {
+    public boolean encontrarElemento(int valor , Node raiz){
+        if (raiz == null) {
             return false;
         }
-        if (value == (int) current.object) {
+        if (valor == (int) raiz.object) {
             return true;
         }
-        else if((int)current.object > value)
-            return encontrarElemento(value, current.left);
+        else if((int)raiz.object > valor)
+            return encontrarElemento(valor, raiz.left);
         else
-            return encontrarElemento(value, current.right);
+            return encontrarElemento(valor, raiz.right);
+    }
+
+    private int encontrarMenor(Node raiz) {
+        Node actual = raiz;
+        while (actual.left != null) {
+            actual = actual.left;
+        }
+        return ((int) actual.object);
+    }
+
+    public Node eliminarElemento(Node raiz, int valor) {
+        if (raiz == null) {
+            return null;
+        }
+        if (valor == (int) raiz.object) {
+            if (raiz.left == null && raiz.right == null) {
+                return null;
+            }
+            if (raiz.right == null) {
+                return raiz.left;
+            }
+
+            if (raiz.left == null) {
+                return raiz.right;
+            }
+            int menorValor = encontrarMenor(raiz.right);
+            raiz.object = menorValor;
+            raiz.right = eliminarElemento(raiz.right, menorValor);
+            return raiz;
+        }
+        if (valor < (int) raiz.object) {
+            raiz.left = eliminarElemento(raiz.left, valor);
+            return raiz;
+        }
+
+        raiz.right = eliminarElemento(raiz.right, valor);
+        return raiz;
     }
 
     @Override

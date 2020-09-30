@@ -23,6 +23,15 @@ public class ProgramaCrearTreeBinario {
         System.out.println("\n########################");
         System.out.println("\nBuscando el elemento 8 en el arbol");
         System.out.println(arbol.encontrarElemento(8,raiz));
+        System.out.println("\n########################");
+        System.out.println("\nEliminando el elemento 8 en el arbol");
+        System.out.println(arbol.eliminarElemento(raiz,8));
+        System.out.println("\n########################");
+        System.out.println("\nEliminando el elemento 1 en el arbol");
+        System.out.println(arbol.eliminarElemento(raiz,1));
+        System.out.println("\n########################");
+        System.out.println("\nImprimiendo el nuevo arbol sin el numero 8 ni el 1");
+        arbol.inOrden(raiz);
     }
 }
 //Developed by Pedro Gomez - ID:000396221
