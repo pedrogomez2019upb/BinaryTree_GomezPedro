@@ -163,6 +163,28 @@ public class BinTree {
         return ((int) actual.object);
     }
 
+    public int cantidadNodos(Node raiz){
+        int contador = 1;
+        if(raiz.left != null){
+            contador += cantidadNodos(raiz.left);
+        }
+        if(raiz.right != null){
+            contador += cantidadNodos(raiz.right);
+        }
+        return contador;
+    }
+
+    public void imprimirHojas(Node raiz){
+        if(raiz==null){
+            return;
+        }
+        if(raiz.left==null && raiz.right ==null){
+            System.out.println(raiz.object);
+        }
+        imprimirHojas(raiz.left);
+        imprimirHojas(raiz.right);
+    }
+
     @Override
     public String toString() {
         return "BinTree{" +

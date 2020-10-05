@@ -17,7 +17,6 @@ public class Node {
         this.right = right;
         this.object = object;
     }
-
     @Override
     public String toString() {
         return "Node{" +
