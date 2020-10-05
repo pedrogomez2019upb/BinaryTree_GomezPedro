@@ -3,10 +3,10 @@ package edu.upb.ds.bintree;
 public class ProgramaCrearTreeBinario {
     public static void main(String[] args) {
         System.out.println("\n########################");
-        System.out.println("\nPrograma insercion Elemento");
+        System.out.println("\nPrograma Insercion Elemento");
         System.out.println("\n########################");
         BinTree arbol = new BinTree();
-        
+
         Node raiz = new Node(7);
         arbol.ubicarElementoBinario(2,raiz);
         arbol.ubicarElementoBinario(10,raiz);
