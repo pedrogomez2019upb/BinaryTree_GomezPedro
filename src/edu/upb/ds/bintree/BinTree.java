@@ -115,13 +115,7 @@ public class BinTree {
             return encontrarElemento(valor, raiz.right);
     }
 
-    private int encontrarMenor(Node raiz) {
-        Node actual = raiz;
-        while (actual.left != null) {
-            actual = actual.left;
-        }
-        return ((int) actual.object);
-    }
+
 
     public Node eliminarElemento(Node raiz, int valor) {
         if (raiz == null) {
@@ -150,6 +144,23 @@ public class BinTree {
 
         raiz.right = eliminarElemento(raiz.right, valor);
         return raiz;
+    }
+
+    // ##### Operaciones Básicas 5/10/2020 #####
+    public int encontrarMenor(Node raiz) {
+        Node actual = raiz;
+        while (actual.left != null) {
+            actual = actual.left;
+        }
+        return ((int) actual.object);
+    }
+
+    public int encontrarMayor(Node raiz) {
+        Node actual = raiz;
+        while (actual.right != null) {
+            actual = actual.right;
+        }
+        return ((int) actual.object);
     }
 
     @Override

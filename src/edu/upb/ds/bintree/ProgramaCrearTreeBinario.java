@@ -18,6 +18,13 @@ public class ProgramaCrearTreeBinario {
         System.out.println("\nSalida inOrden del arbol");
         arbol.inOrden(raiz);
         System.out.println("\n########################");
+        System.out.println("\n########################");
+        System.out.println("\nBuscando el elemento menor en el arbol");
+        System.out.println(arbol.encontrarMenor(raiz));
+        System.out.println("\n########################");
+        System.out.println("\nBuscando el elemento mayor en el arbol");
+        System.out.println(arbol.encontrarMayor(raiz));
+        System.out.println("\n########################");
         System.out.println("\nBuscando el elemento 12 en el arbol");
         System.out.println(arbol.encontrarElemento(12,raiz));
         System.out.println("\n########################");
