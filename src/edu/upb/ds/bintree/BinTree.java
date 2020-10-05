@@ -185,6 +185,19 @@ public class BinTree {
         imprimirHojas(raiz.right);
     }
 
+    public void imprimirNivel(Node root, int nivel)
+    {
+        if (root == null)
+            return;
+        if (nivel == 1)
+            System.out.println(root.object);
+        else if (nivel > 1)
+        {
+            imprimirNivel(root.left, nivel-1);
+            imprimirNivel(root.right, nivel-1);
+        }
+    }
+
     @Override
     public String toString() {
         return "BinTree{" +

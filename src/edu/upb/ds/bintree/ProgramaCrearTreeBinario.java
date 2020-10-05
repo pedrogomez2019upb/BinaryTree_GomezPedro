@@ -30,6 +30,9 @@ public class ProgramaCrearTreeBinario {
         System.out.println("\nHojas en el Arbol");
         arbol.imprimirHojas(raiz);
         System.out.println("\n########################");
+        System.out.println("\nImprimir el segundo nivel del arbol");
+        arbol.imprimirNivel(raiz,2);
+        System.out.println("\n########################");
         System.out.println("\nBuscando el elemento 12 en el arbol");
         System.out.println(arbol.encontrarElemento(12,raiz));
         System.out.println("\n########################");
