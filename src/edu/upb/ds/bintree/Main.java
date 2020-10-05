@@ -75,4 +75,4 @@ public class Main {
 
     }
 }
-//Developed by Pedro Gomez - ID:000396221
+//Developed by Estefany Rueda & Pedro Gomez - ID:000402237 & ID:000396221
