@@ -6,6 +6,8 @@ public class Node {
     public Node right;
     public Object object;
 
+    public Node(){}
+
     public Node(Object object) {
         this.left = null;
         this.right = null;

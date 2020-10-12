@@ -197,7 +197,41 @@ public class BinTree {
             imprimirNivel(root.right, nivel-1);
         }
     }
+    //######
+    public boolean isOperator(char c) {
+        if (c == '+' || c == '-'
+                || c == '*' || c == '/'
+                || c == '^') {
+            return true;
+        }
+        return false;
+    }
+    public Node construirAE(String cadena) {
+        ListStack pila = new ListStack();
+        Node t= new Node();
+        Node t1= new Node();
+        Node t2= new Node();
+        char[] postfija = cadena.toCharArray();
+        for (int i = 0; i < postfija.length; i++) {
+            // Si es Operando , se ingresa al Stack
+            if (!isOperator(postfija[i])) {
+                t = new Node(postfija[i]);
+                pila.push(t);
+            } else
+            {
+                t = new Node(postfija[i]);
+                t1 = (Node) pila.pop();
+                t2 = (Node) pila.pop();
+                t.right = t1;
+                t.left = t2;
+                pila.push(t);
+            }
+        }
+        t = (Node) pila.peek();
+        pila.pop();
 
+        return t;
+    }
     @Override
     public String toString() {
         return "BinTree{" +
