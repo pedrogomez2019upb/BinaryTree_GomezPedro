@@ -198,39 +198,70 @@ public class BinTree {
         }
     }
     //######
-    public boolean isOperator(char c) {
-        if (c == '+' || c == '-'
-                || c == '*' || c == '/'
-                || c == '^') {
-            return true;
+    public static int operador(char x){
+        if(x=='+' || x=='-'){
+            return 1;
+        }else if (x=='*' || x=='/'){
+            return 2;
+        }else if (x=='^'){
+            return 3;
         }
-        return false;
+        return 0;
     }
+
+    public String infijaApostfija(String formula){
+        String salida="";
+        ListStack stack = new ListStack();
+        for (int i = 0; i <formula.length() ; i++) {
+            char caracterEncotrado = formula.charAt(i);
+            if(operador(caracterEncotrado)>0){
+                while(!(stack.isEmpty()) && operador((Character) stack.peek())>=operador(caracterEncotrado)){
+                    salida += stack.pop();
+                }
+                stack.push(caracterEncotrado);
+            }else if(caracterEncotrado==')'){
+                char x = (char) stack.pop();
+                while(x!='('){
+                    salida += x;
+                    x = (char) stack.pop();
+                }
+            }else if(caracterEncotrado=='('){
+                stack.push(caracterEncotrado);
+            }else{
+                salida += caracterEncotrado;
+            }
+        }
+        for (int i = 0; i <=stack.size() ; i++) {
+            salida += stack.pop();
+        }
+        return salida;
+    }
+
     public Node construirAE(String cadena) {
         ListStack pila = new ListStack();
-        Node t= new Node();
-        Node t1= new Node();
-        Node t2= new Node();
+        Node nodo1= new Node();
+        Node nodo2= new Node();
+        Node nodo3= new Node();
         char[] postfija = cadena.toCharArray();
         for (int i = 0; i < postfija.length; i++) {
             // Si es Operando , se ingresa al Stack
-            if (!isOperator(postfija[i])) {
-                t = new Node(postfija[i]);
-                pila.push(t);
+            if (!(operador(postfija[i])==1)&&!(operador(postfija[i])==2)&&!(operador(postfija[i])==3)) {
+                nodo1 = new Node(postfija[i]);
+                pila.push(nodo1);
             } else
             {
-                t = new Node(postfija[i]);
-                t1 = (Node) pila.pop();
-                t2 = (Node) pila.pop();
-                t.right = t1;
-                t.left = t2;
-                pila.push(t);
+                nodo1 = new Node(postfija[i]);
+                nodo2 = (Node) pila.pop();
+                nodo3 = (Node) pila.pop();
+                nodo1.right = nodo2;
+                nodo1.left = nodo3;
+                pila.push(nodo1);
             }
         }
-        t = (Node) pila.peek();
+        nodo1 = (Node) pila.peek();
         pila.pop();
 
-        return t;
+        return nodo1;
     }
     @Override
     public String toString() {
