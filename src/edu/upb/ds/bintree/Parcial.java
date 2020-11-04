@@ -28,6 +28,9 @@ public class Parcial {
         System.out.println("\nEl elemento 88 se encuentra en el arbol?");
         System.out.println(arbol.encontrarElemento(88,raiz));
         System.out.println("\n########################");
+        System.out.println("\nEl elemento 202 se encuentra en el arbol?");
+        System.out.println(arbol.encontrarElemento(202,raiz));
+        System.out.println("\n########################");
         System.out.println("\nEliminando el elemento 50 en el arbol");
         System.out.println(arbol.eliminarElemento(raiz,50));
         System.out.println("\n########################");
